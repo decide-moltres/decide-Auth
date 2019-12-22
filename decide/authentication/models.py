@@ -17,3 +17,5 @@ class UserProfile(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
+    def __str__(self):
+        return "("+str(self.sex)+","+str(self.birthdate)+","+str(self.related_political_party)+")"
