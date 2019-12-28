@@ -19,9 +19,14 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('birthdate', models.DateField(null=True, verbose_name='Birthdate')),
-                ('sex', models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')], max_length=1, null=True, verbose_name='Sex')),
-                ('related_user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
-                ('related_political_party', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='PoliticalParty', to='voting.PoliticalParty')),
+                ('sex', 
+models.CharField(choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')],
+ max_length=1, null=True, verbose_name='Sex')),
+                ('related_user',
+ models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('related_political_party',
+ models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+ related_name='PoliticalParty', to='voting.PoliticalParty')),
             ],
         ),
     ]
