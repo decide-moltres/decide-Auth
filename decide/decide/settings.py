@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
+    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
@@ -194,3 +195,7 @@ if os.path.exists("config.jsonnet"):
 
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())
+
+TELEGRAM_BOT_NAME = 'Decide-Auth'
+TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
+TELEGRAM_LOGIN_REDIRECT_URL = 'authmoltres.herokuapp.com/redirect'
