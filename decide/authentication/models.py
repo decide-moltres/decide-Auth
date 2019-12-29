@@ -9,7 +9,9 @@ class UserProfile(models.Model):
         ('F', 'Female'),
         ('O', 'Other'),
     )
-    related_political_party = models.CharField(('Related political party'),max_length=30, blank=True)
+    related_political_party = models.ForeignKey('voting.PoliticalParty', 
+related_name='PoliticalParty',
+ on_delete=models.CASCADE)
     birthdate = models.DateField(('Birthdate'),null=True)
     sex = models.CharField(('Sex'),max_length=1, choices=SEX_OPTIONS, null=True)
     related_user = models.OneToOneField(
@@ -17,3 +19,5 @@ class UserProfile(models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
+    def __str__(self):
+        return "("+str(self.sex)+","+str(self.birthdate)+","+str(self.related_political_party)+")"
