@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
-    'gateway',
+    'gateway',	
 ]
 
 REST_FRAMEWORK = {
@@ -100,7 +100,8 @@ ROOT_URLCONF = 'decide.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'authentication/templates') ,
+		],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -192,5 +193,7 @@ if os.path.exists("config.jsonnet"):
         vars()[k] = v
 
 
+LOGIN_REDIRECT_URL = 'home'
+	
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())

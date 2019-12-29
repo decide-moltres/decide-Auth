@@ -8,10 +8,12 @@ from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 
 from .serializers import UserSerializer
+
+from django.contrib.auth.forms import UserCreationForm
 
 
 class GetUserView(APIView):
@@ -53,3 +55,21 @@ class RegisterView(APIView):
         except IntegrityError:
             return Response({}, status=HTTP_400_BAD_REQUEST)
         return Response({'user_pk': user.pk, 'token': token.key}, HTTP_201_CREATED)
+		
+def home(request):
+	count = User.objects.count()	
+	return render(request, 'home.html', {'count': count} 
+	)
+	
+def signup(request):
+	if request.method == 'POST':
+		form = UserCreationForm(request.POST)
+		if form.is_valid():
+			user = form.save()
+			return redirect('home')
+	else:
+		form = UserCreationForm()
+	return render(request, 'registration/signup.html', {'form': form}
+	)
+
+		
