@@ -194,6 +194,7 @@ if os.path.exists("config.jsonnet"):
 
 
 LOGIN_REDIRECT_URL = 'home'
-	
+LOGOUT_REDIRECT_URL = 'home'
+		
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())
