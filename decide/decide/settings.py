@@ -32,19 +32,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+	'django.contrib.auth',
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+	
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',	
+	'social_django',
 ]
 
 REST_FRAMEWORK = {
@@ -57,6 +58,9 @@ REST_FRAMEWORK = {
 
 AUTHENTICATION_BACKENDS = [
     'base.backends.AuthBackend',
+	'social_core.backends.github.GithubOAuth2',
+	'social_core.backends.google.GoogleOAuth2',
+	'django.contrib.auth.backends.ModelBackend',
 ]
 
 MODULES = [
@@ -93,6 +97,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'decide.urls'
@@ -109,6 +114,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+				'social_django.context_processors.backends',
+				'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -195,6 +202,13 @@ if os.path.exists("config.jsonnet"):
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-		
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '407573137056-c4f14n6t9jkivkvlfuhg9n2fqt01ho7i.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'MzuuGAIRT-CeMzwA0i55KM2s'
+
+SOCIAL_AUTH_GITHUB_KEY = 'e69430a687158c2c9a23'
+SOCIAL_AUTH_GITHUB_SECRET = '92831c01913b6bd76f0acf03d41d59dce3f5b7f9'
+ 
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())

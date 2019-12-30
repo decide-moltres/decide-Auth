@@ -1,4 +1,5 @@
 from django.urls import include, path
+from django.conf.urls import url
 from rest_framework.authtoken.views import obtain_auth_token
 
 from .views import GetUserView, LogoutView, RegisterView
@@ -12,7 +13,9 @@ urlpatterns = [
     path('register/', RegisterView.as_view()),
 	path('', views.home, name='home'),
 	path('signup/', views.signup, name='signup'),
-	path('accounts/', include('django.contrib.auth.urls')),
+	path('accounts/', include('django.contrib.auth.urls')),	
+	url(r'^oauth/', include('social_django.urls', namespace="social")),
+
 ]
 
 
