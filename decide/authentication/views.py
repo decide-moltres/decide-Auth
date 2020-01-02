@@ -62,3 +62,6 @@ def home(request): #<-- home
 
 def login(request): #<-- home
         return render(request, 'registration/login.html')
+
+def policy(request): #<-- home
+        return render(request, 'privacy_policy.html')
