@@ -11,6 +11,9 @@ from django.db import IntegrityError
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 
+from django.contrib.auth.decorators import login_required #<--
+from django.shortcuts import render #<--
+
 from .serializers import UserSerializer
 
 
@@ -53,3 +56,9 @@ class RegisterView(APIView):
         except IntegrityError:
             return Response({}, status=HTTP_400_BAD_REQUEST)
         return Response({'user_pk': user.pk, 'token': token.key}, HTTP_201_CREATED)
+
+def home(request): #<-- home
+        return render(request, 'home.html')
+
+def login(request): #<-- home
+        return render(request, 'registration/login.html')
