@@ -207,3 +207,8 @@ if os.path.exists("config.jsonnet"):
 
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())
+
+# Authentication
+
+SOCIAL_AUTH_FACEBOOK_KEY = '572053296676935'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'b9e748f263a09917bb2c5a6f918aee9b'  # App Secret

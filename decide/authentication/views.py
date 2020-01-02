@@ -57,6 +57,8 @@ class RegisterView(APIView):
             return Response({}, status=HTTP_400_BAD_REQUEST)
         return Response({'user_pk': user.pk, 'token': token.key}, HTTP_201_CREATED)
 
-class HomeView(APIView): #<--
-    def home(self, request):
-        return render(request, 'templates/home.html')
+def home(request): #<-- home
+        return render(request, 'home.html')
+
+def login(request): #<-- home
+        return render(request, 'registration/login.html')
