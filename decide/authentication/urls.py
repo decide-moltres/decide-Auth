@@ -12,6 +12,7 @@ urlpatterns = [
     path('register/', RegisterView.as_view()),
     path('home/', views.home), #<--
     path('registration/login', views.login),
+    path('policy', views.policy), 
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
  
 ]
