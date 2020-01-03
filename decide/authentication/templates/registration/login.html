@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-  <br>
-  <p><strong>-- OR --</strong></p>
-  <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
-  <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a><br>
-{% endblock %}
+
+	<h2>Inicio de sesión</h2>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Enviar</button>		
+	
+	<p><strong>-- O --</strong></p>
+	<a href="{% url 'social:begin' 'github' %}">
+		<button type="button" name="button" class="btn btn-primary">Github</button>	
+	</a>
+		<a href="{% url 'social:begin' 'google-oauth2' %}">
+		<button type="button" name="button" class="btn btn-danger">Google+</button>	
+	</a>
+    <a href="{% url 'social:begin' 'facebook' %}">
+		<button type="button" name="button" class="btn btn-danger">Facebook</button>	
+	</a>
+	</form>
+	
+{% endblock %}	
+
