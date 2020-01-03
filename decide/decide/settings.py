@@ -66,6 +66,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
+    'social_core.backends.reddit.RedditOAuth2',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
@@ -228,3 +229,6 @@ django_heroku.settings(locals())
 
 SOCIAL_AUTH_FACEBOOK_KEY = '572053296676935'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b9e748f263a09917bb2c5a6f918aee9b'  # App Secret
+
+SOCIAL_AUTH_REDDIT_KEY = 'kXx1spRf4zz6aw'  # App ID
+SOCIAL_AUTH_REDDIT_SECRET = 'YhwOUO8nxCklIuK7Ph3MQVmkNdk'  # App Secret
