@@ -68,6 +68,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
     'social_core.backends.reddit.RedditOAuth2',
+    'social_core.backends.telegram.TelegramAuth',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
