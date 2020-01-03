@@ -38,14 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	
+
+
+    'social_django',
+
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
-    'gateway',	
-	'social_django',
+    'gateway',
 ]
 
 REST_FRAMEWORK = {
@@ -58,9 +60,15 @@ REST_FRAMEWORK = {
 
 AUTHENTICATION_BACKENDS = [
     'base.backends.AuthBackend',
-	'social_core.backends.github.GithubOAuth2',
-	'social_core.backends.google.GoogleOAuth2',
-	'django.contrib.auth.backends.ModelBackend',
+
+
+    'social_core.backends.github.GithubOAuth2', # <--
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.twitter.TwitterOAuth', # <--
+    'social_core.backends.facebook.FacebookOAuth2', # <--
+
+    'django.contrib.auth.backends.ModelBackend', # <--
+
 ]
 
 MODULES = [
@@ -97,7 +105,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'social_django.middleware.SocialAuthExceptionMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware', # <--
+
 ]
 
 ROOT_URLCONF = 'decide.urls'
@@ -114,8 +124,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-				'social_django.context_processors.backends',
-				'social_django.context_processors.login_redirect',
+
+
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
@@ -211,3 +223,8 @@ SOCIAL_AUTH_GITHUB_SECRET = '92831c01913b6bd76f0acf03d41d59dce3f5b7f9'
  
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())
+
+# Authentication
+
+SOCIAL_AUTH_FACEBOOK_KEY = '572053296676935'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'b9e748f263a09917bb2c5a6f918aee9b'  # App Secret
