@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
+    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
@@ -217,6 +218,8 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# Authentication
+
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '407573137056-c4f14n6t9jkivkvlfuhg9n2fqt01ho7i.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'MzuuGAIRT-CeMzwA0i55KM2s'
 SOCIAL_AUTH_GITHUB_KEY = 'e69430a687158c2c9a23'
@@ -225,10 +228,15 @@ SOCIAL_AUTH_GITHUB_SECRET = '92831c01913b6bd76f0acf03d41d59dce3f5b7f9'
 INSTALLED_APPS = INSTALLED_APPS + MODULES
 django_heroku.settings(locals())
 
-# Authentication
+
 
 SOCIAL_AUTH_FACEBOOK_KEY = '572053296676935'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b9e748f263a09917bb2c5a6f918aee9b'  # App Secret
 
 SOCIAL_AUTH_REDDIT_KEY = 'kXx1spRf4zz6aw'  # App ID
 SOCIAL_AUTH_REDDIT_SECRET = 'YhwOUO8nxCklIuK7Ph3MQVmkNdk'  # App Secret
+
+TELEGRAM_BOT_NAME = 'Decide-Auth'
+TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
+TELEGRAM_LOGIN_REDIRECT_URL = ''
+
