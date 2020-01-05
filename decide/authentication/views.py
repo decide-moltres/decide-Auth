@@ -60,8 +60,8 @@ class RegisterView(APIView):
 def home(request): #<-- home
         return render(request, 'home.html')
 
-def login(request): #<-- home
+def login(request): #<-- login
         return render(request, 'registration/login.html')
 
-def policy(request): #<-- home
-        return render(request, 'privacy_policy.html')
+def policy(request): #<-- policy
+        return render(request, 'home/privacy_policy.html')
