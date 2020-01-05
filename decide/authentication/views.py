@@ -76,9 +76,9 @@ def signup(request):
 	return render(request, 'registration/signup.html', {'form': form}
 	)
 
-def login(request): 
+def login(request): #<-- login
         return render(request, 'registration/login.html')
 
-def policy(request): 
-        return render(request, 'privacy_policy.html')
+def policy(request): #<-- policy
+        return render(request, 'home/privacy_policy.html')
 
