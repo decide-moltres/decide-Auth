@@ -68,6 +68,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
     'social_core.backends.reddit.RedditOAuth2',
+    'social_core.backends.vk.VKOAuth2',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
@@ -235,6 +236,9 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'b9e748f263a09917bb2c5a6f918aee9b'  # App Secret
 
 SOCIAL_AUTH_REDDIT_KEY = 'kXx1spRf4zz6aw'  # App ID
 SOCIAL_AUTH_REDDIT_SECRET = 'YhwOUO8nxCklIuK7Ph3MQVmkNdk'  # App Secret
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = 'kJFzQoCeLgcIukRlkFjj'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'dd9777d5dd9777d5dd9777d5c2ddf998b8ddd97dd9777d583863f354638d7c3c1aca52b'
 
 TELEGRAM_BOT_NAME = 'Decide-Auth'
 TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
