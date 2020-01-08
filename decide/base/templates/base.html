@@ -6,6 +6,18 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body>
+	<h1>¡Decide!</h1>
+		<a href="{% url 'home' %}">Inicio</a> /
+		{% if user.is_authenticated %}
+			<a href="{% url 'password_change' %}">Cambiar contraseña</a> /
+			<a href="{% url 'logout' %}">Cerrar sesión</a> /
+			<strong> Estas autentificado como {{ user.username }}</strong> 
+		{% else %}
+			<a href="{% url 'signup' %}">Registro</a> /
+			<a href="{% url 'login' %}">Iniciar sesión</a> 
+		{% endif %}
+		<hr>
+
         {% block content %}
         {% endblock %}
 
