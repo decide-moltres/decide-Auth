@@ -38,14 +38,13 @@ INSTALLED_APPS = [
 
 
     'social_django',
-
+    'social_core',
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
-    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
@@ -65,6 +64,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
     'social_core.backends.reddit.RedditOAuth2',
+    'social_core.backends.telegram.TelegramAuth',
     'social_core.backends.spotify.SpotifyOAuth2',
     'social_core.backends.pinterest.PinterestOAuth2',
 
@@ -263,5 +263,8 @@ SOCIAL_AUTH_PINTEREST_SCOPE = [
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 
 TELEGRAM_BOT_NAME = 'Decide-Auth'
+
+SOCIAL_AUTH_TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_LOGIN_REDIRECT_URL = ''
+
