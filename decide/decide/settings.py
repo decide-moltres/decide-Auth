@@ -253,6 +253,12 @@ SOCIAL_AUTH_SPOTIFY_SECRET = '57899192a5244b2683034e59ac8f02cf'
 
 SOCIAL_AUTH_PINTEREST_KEY = '5076324617361072271'
 SOCIAL_AUTH_PINTEREST_SECRET = '7c05409999886a4a788da691ef1cfdb23b452dd03cf4fbc9eee042ef5c685fdd'
+SOCIAL_AUTH_PINTEREST_SCOPE = [
+    'read_public',
+    'write_public',
+    'read_relationships',
+    'write_relationships'
+]
 
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 
