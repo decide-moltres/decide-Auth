@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h2>Página principal</h2>
+	<p>Bienvenido a Decide, {% if user.is_authenticated %}{{ user.username }}{% else %}visitante{% endif %}</p>
+	<p>
+		<strong> Total de usuarios registrados: </strong> {{ count }}
+	</p>
+  <a href="privacy_policy.html">Nuestra política de privacidad</a>
+{% endblock %}	
+
+
