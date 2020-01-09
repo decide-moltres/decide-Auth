@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
 
     'social_django',
+    'nocaptcha_recaptcha',
 
     'corsheaders',
     'django_filters',
@@ -255,3 +256,6 @@ SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 TELEGRAM_BOT_NAME = 'Decide-Auth'
 TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_LOGIN_REDIRECT_URL = ''
+
+NORECAPTCHA_SITE_KEY = '6LdRfswUAAAAAPV4Y0E_i4OqknxwXEdbvu6i_SpW'
+NORECAPTCHA_SECRET_KEY = '6LdRfswUAAAAAG0LIt-Kp_74iCUOdJd75d1PTGaM'

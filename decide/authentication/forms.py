@@ -3,10 +3,12 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 from authentication.models import UserProfile
+from nocaptcha_recaptcha.fields import NoReCaptchaField
 
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
+    captcha = NoReCaptchaField()
 
     class Meta:
         model = User
@@ -16,7 +18,8 @@ class RegistrationForm(UserCreationForm):
             'last_name',
             'email',
 			'password1',
-			'password2'
+			'password2',
+	    'captcha'
         )
 
     def save(self, commit=True):
@@ -42,4 +45,6 @@ class EditProfileForm(UserChangeForm):
             'last_name',
 			'password'	
         )
+
+
 		 
