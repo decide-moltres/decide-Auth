@@ -21,9 +21,11 @@ urlpatterns = [
     path('signup/', views.register, name='signup'),		   
     path('accounts/', include('django.contrib.auth.urls')),	
     url(r'^oauth/', include('social_django.urls', namespace="social")),
+
 	  url(r'^profile/$', views.view_profile, name="view_profile"),
 	  url(r'^profile/edit/$', views.edit_profile, name="edit_profile"),
 	  url(r'^profile/password/$', views.change_password, name='change_password'),
+
     path('policy', views.policy), 
 	
 

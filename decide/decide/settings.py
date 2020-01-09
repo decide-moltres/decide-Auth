@@ -38,14 +38,13 @@ INSTALLED_APPS = [
 
 
     'social_django',
-
+    'social_core',
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
-    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
@@ -65,8 +64,11 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
     'social_core.backends.reddit.RedditOAuth2',
+    'social_core.backends.telegram.TelegramAuth',
     'social_core.backends.spotify.SpotifyOAuth2',
     'social_core.backends.pinterest.PinterestOAuth2',
+    'social_core.backends.box.BoxOAuth2',
+    'social_core.backends.vk.VKOAuth2',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
@@ -260,8 +262,16 @@ SOCIAL_AUTH_PINTEREST_SCOPE = [
     'write_relationships'
 ]
 
+SOCIAL_AUTH_BOX_KEY = 'xfhv6juai5fq19l7soz0mmqucig7a1q0'
+SOCIAL_AUTH_BOX_SECRET = 'NJbkDZB31gi8qzRzxLMI8hMNBhWXTDnG'
+
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7270253'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'dd9777d5dd9777d5dd9777d5c2ddf998b8ddd97dd9777d583863f354638d7c3c1aca52b'
 
 TELEGRAM_BOT_NAME = 'Decide-Auth'
+
+SOCIAL_AUTH_TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_LOGIN_REDIRECT_URL = ''
+
