@@ -67,6 +67,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.telegram.TelegramAuth',
     'social_core.backends.spotify.SpotifyOAuth2',
     'social_core.backends.pinterest.PinterestOAuth2',
+    'social_core.backends.box.BoxOAuth2',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
@@ -259,6 +260,9 @@ SOCIAL_AUTH_PINTEREST_SCOPE = [
     'read_relationships',
     'write_relationships'
 ]
+
+SOCIAL_AUTH_BOX_KEY = 'xfhv6juai5fq19l7soz0mmqucig7a1q0'
+SOCIAL_AUTH_BOX_SECRET = 'NJbkDZB31gi8qzRzxLMI8hMNBhWXTDnG'
 
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 
