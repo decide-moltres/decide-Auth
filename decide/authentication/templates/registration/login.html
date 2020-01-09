@@ -8,21 +8,18 @@
 		{{ form.as_p }}
 		<button type="submit">Enviar</button>		
 	
-	<p><strong>-- O --</strong></p>
+	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
 	<a href="{% url 'social:begin' 'github' %}">
-		<button type="button" name="button" class="btn btn-primary">Github</button>	
+		<button id="github" type="button" name="button" class="boton_social">Github</button>	
 	</a>
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
-		<button type="button" name="button" class="btn btn-danger">Google+</button>	
+		<button id="google" type="button" name="button" class="boton_social">Google+</button>	
 	</a>
     	<a href="{% url 'social:begin' 'facebook' %}">
-		<button type="button" name="button" class="btn btn-danger">Facebook</button>	
+		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
 	</a>
 	<a href="{% url 'social:begin' 'reddit' %}">
-		<button type="button" name="button" class="btn btn-danger">Reddit</button>	
-	</a>
-	<a href="{% url 'social:begin' 'spotify' %}">
-		<button type="button" name="button" class="btn btn-danger">Spotify</button>	
+		<button id="reddit" type="button" name="button" class="boton_social">Reddit</button>	
 	</a>
 	</form>
 	
