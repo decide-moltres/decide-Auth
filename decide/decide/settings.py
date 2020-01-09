@@ -41,14 +41,13 @@ INSTALLED_APPS = [
 
 
     'social_django',
-
+    'social_core',
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
-    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
