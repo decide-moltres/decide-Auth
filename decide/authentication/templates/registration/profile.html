@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}	
+	<div class="container">
+		<h1>Perfil de usuario</h1>
+		<p>Nombre de usuario: {{ user }}</p>
+		<p>Nombre: {{ user.first_name }}</p>
+		<p>Apellidos: {{ user.last_name }}</p>
+		<p>Email: {{ user.email }}</p>
+	</div>
+{% endif %}
+{% endblock %}

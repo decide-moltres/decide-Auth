@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Editar datos</title>
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}	
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cambiar</button>
+    </form>
+    <br>
+</div>
+{% endif %}
+{% endblock %}

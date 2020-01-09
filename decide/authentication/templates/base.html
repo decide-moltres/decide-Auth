@@ -6,14 +6,21 @@
     </head>
     <body>
 		<h1>¡Decide!</h1>
-		<a href="{% url 'home' %}">Inicio</a> /
-		{% if user.is_authenticated %}
-			<a href="{% url 'password_change' %}">Cambiar contraseña</a> /
-			<a href="{% url 'logout' %}">Cerrar sesión</a> /
-			<strong> Estas autentificado como {{ user.username }}</strong> 
+		{% if user.is_authenticated %}			
+		<ul class="nav navbar-nav">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+            <li><a href="{% url 'view_profile' %}">Perfil personal</a></li>
+            <li><a href="{% url 'edit_profile' %}">Editar datos personales</a></li>
+			<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+			<li><a href="{% url 'logout' %}">Cerrar sesión</a> </li>
+            <li><strong> Estas autentificado como {{ user.username }}</strong> </li>
+        </ul>			
 		{% else %}
-			<a href="{% url 'signup' %}">Registro</a> /
-			<a href="{% url 'login' %}">Iniciar sesión</a> 
+		<ul class="nav navbar-nav">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+			<li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+			<li><a href="{% url 'signup' %}">Registro</a></li>
+		</ul>
 		{% endif %}
 		<hr>
 		{% block content %}
