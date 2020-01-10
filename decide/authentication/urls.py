@@ -24,6 +24,8 @@ urlpatterns = [
 	url(r'^profile/$', views.view_profile, name="view_profile"),
 	url(r'^profile/edit/$', views.edit_profile, name="edit_profile"),
 	url(r'^profile/password/$', views.change_password, name='change_password'),
+	url(r'^settings/$', views.settings, name='settings'),
+    url(r'^settings/password/$', views.password, name='password'),
     path('policy/', views.policy, name='policy'), 
 	
 

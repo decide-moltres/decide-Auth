@@ -15,7 +15,13 @@
 			<li><a href="{% url 'home' %}">Inicio</a></li>	
             <li><a href="{% url 'view_profile' %}">Perfil personal</a></li>
             <li><a href="{% url 'edit_profile' %}">Editar datos personales</a></li>
-			<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+			{% if user.has_usable_password %}
+				<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+			{% endif %}
+			<li><a href="{% url 'settings' %}">Redes sociales</a></li>	
+			{% if not user.has_usable_password %}			
+				<li><a href="{% url 'password' %}">Cambiar contraseña</a></li>
+			{% endif %}
 			<li><a href="{% url 'logout' %}">Cerrar sesión</a> </li>
             <li><p> Estas autentificado como <strong>{{ user.username }}</strong></p> </li>
         </ul>			
