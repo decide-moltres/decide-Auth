@@ -12,12 +12,12 @@
   color: white;
 }
 
-li {
+.menu li {
   float: left;
-   color: white;
+  color: white;
 }
 
-li a {
+.menu li a {
   display: block;
   color: white;
   text-align: center;
@@ -25,7 +25,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.menu li a:hover {
   background-color: #555555;
 }
 
