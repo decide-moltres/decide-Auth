@@ -1,0 +1,60 @@
+#cabecera {
+  background-color: #748794;
+  color: white;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #748794;
+  color: white;
+}
+
+.menu li {
+  float: left;
+  color: white;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #555555;
+}
+
+#github {
+  background-color: #333333; 
+ }
+
+#google {
+  background-color: #DB4437;  
+}
+
+#facebook {
+  background-color: #3b5998;  
+}
+
+#reddit {
+  background-color: #FF5700;
+}  
+
+#box {
+  background-color: #0a497b;
+}  
+
+
+.boton_social {
+  color: white;
+  padding: 8px 10px;
+  border: none;
+}
+
+
+
