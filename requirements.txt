@@ -15,3 +15,4 @@ jsonnet==0.12.1
 https://github.com/python-social-auth/social-core/archive/master.zip
 social-auth-app-django
 django-crispy-forms>=1.8.1
+bootstrap-social

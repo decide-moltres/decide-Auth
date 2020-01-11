@@ -9,11 +9,17 @@
 		<button type="submit">Enviar</button>		
 	
 	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
+
 	<a href="{% url 'social:begin' 'github' %}">
 		<button id="github" type="button" name="button" class="btn btn-git">
 			<i class="fab fa-github"></i>
 		</button>	
 	</a>
+
+	<a class="btn btn-block btn-social btn-twitter">
+		<span class="fa fa-twitter"></span>
+		Sign in with Twitter
+	  </a>
 
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
 		<button id="google" type="button" name="button" class="btn btn-gplus">
@@ -26,7 +32,7 @@
 		</button>	
 	</a>
 
-		<button type="button" class="reddit-ic">
+		<button id="reddit" name="reddit" type="button" class="reddit-ic">
 			<i class="fab fa-lg fa-reddit-alien pr-3"></i>
 		</button>	
 
