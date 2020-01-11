@@ -13,7 +13,11 @@
 		<button id="github" type="button" name="button" class="boton_social">Github</button>	
 	</a>
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
-		<button id="google" type="button" name="button" class="boton_social">Google+</button>	
+		<button id="google" type="button" name="button" class="btn btn-gplus btn-lg">
+			<i class="fab fa-google-plus-g"></i>
+			Google+
+		</button>	
+		<span class="counter">22</span>
 	</a>
     	<a href="{% url 'social:begin' 'facebook' %}">
 		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
