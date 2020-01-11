@@ -74,7 +74,8 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.box.BoxOAuth2',
     'social_core.backends.vk.VKOAuth2',
 
-    'django.contrib.auth.backends.ModelBackend', # <--
+    'django.contrib.auth.backends.ModelBackend', # <--	  
+    'authentication.backends.EmailAuthBackend',
 
 ]
 
