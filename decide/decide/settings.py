@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django_telegram_login',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
