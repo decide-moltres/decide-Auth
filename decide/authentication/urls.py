@@ -1,22 +1,25 @@
 from django.urls import include, path
-from django.conf.urls import url
+from django.conf.urls import url, include
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework.authtoken.views import obtain_auth_token
 
 from .views import GetUserView, LogoutView, RegisterView, home
 from authentication import views #<--
 
 from django.contrib.auth.views import (
-    login, logout
-	)
+login, logout)
 
 
 urlpatterns = [
+
     path('login/', obtain_auth_token),
     path('logout/', LogoutView.as_view()),
     path('getuser/', GetUserView.as_view()),
     path('register/', RegisterView.as_view()),
 
     path('', views.home, name='home'),	
+
 	url(r'^login/$', login, {'template_name': 'registrarion/login.html'}, name='login'),
     path('signup/', views.register, name='signup'),		   
     path('accounts/', include('django.contrib.auth.urls')),	
@@ -26,6 +29,7 @@ urlpatterns = [
 	url(r'^profile/password/$', views.change_password, name='change_password'),	
     url(r'^settings/password/$', views.password, name='password'),
     path('policy/', views.policy, name='policy'), 
+
 	
 
 

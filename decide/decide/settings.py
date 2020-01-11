@@ -13,6 +13,9 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -25,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+from django.utils.translation import ugettext_lazy as _
 
 # Application definition
 
@@ -38,14 +42,13 @@ INSTALLED_APPS = [
 
 
     'social_django',
-
+    'social_core',
     'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'gateway',
-    'django_telegram_login',
 ]
 
 REST_FRAMEWORK = {
@@ -65,7 +68,11 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth', # <--
     'social_core.backends.facebook.FacebookOAuth2', # <--
     'social_core.backends.reddit.RedditOAuth2',
+    'social_core.backends.telegram.TelegramAuth',
     'social_core.backends.spotify.SpotifyOAuth2',
+    'social_core.backends.pinterest.PinterestOAuth2',
+    'social_core.backends.box.BoxOAuth2',
+    'social_core.backends.vk.VKOAuth2',
 
     'django.contrib.auth.backends.ModelBackend', # <--
 
@@ -100,6 +107,7 @@ APIS = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -173,7 +181,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
+LANGUAGES = (
+    ('en-us', _('English')),
+    ('es-es', _('Español')),
+
+)
+
 LANGUAGE_CODE = 'en-us'
+_ = lambda s: s
 
 TIME_ZONE = 'UTC'
 
@@ -252,8 +267,25 @@ SOCIAL_AUTH_REDDIT_SECRET = 'YhwOUO8nxCklIuK7Ph3MQVmkNdk'  # App Secret
 SOCIAL_AUTH_SPOTIFY_KEY = 'a0e947034c4e466890e56f7b16d42bcf'
 SOCIAL_AUTH_SPOTIFY_SECRET = '57899192a5244b2683034e59ac8f02cf'
 
+SOCIAL_AUTH_PINTEREST_KEY = '5076324617361072271'
+SOCIAL_AUTH_PINTEREST_SECRET = '7c05409999886a4a788da691ef1cfdb23b452dd03cf4fbc9eee042ef5c685fdd'
+SOCIAL_AUTH_PINTEREST_SCOPE = [
+    'read_public',
+    'write_public',
+    'read_relationships',
+    'write_relationships'
+]
+
+SOCIAL_AUTH_BOX_KEY = 'xfhv6juai5fq19l7soz0mmqucig7a1q0'
+SOCIAL_AUTH_BOX_SECRET = 'NJbkDZB31gi8qzRzxLMI8hMNBhWXTDnG'
+
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7270253'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = '674998ac674998ac674998ac63672777c166749674998ac395e96870d4fdde734b972c0'
 
 TELEGRAM_BOT_NAME = 'Decide-Auth'
+
+SOCIAL_AUTH_TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_BOT_TOKEN = '833892302:AAFJ6RTuuKmHiscwehvUKfBcZeoYw3gcQA4'
 TELEGRAM_LOGIN_REDIRECT_URL = ''
+

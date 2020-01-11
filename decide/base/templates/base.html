@@ -1,8 +1,6 @@
-{% load static i18n %}
-
 <!DOCTYPE html>
 <html>
-
+  {% load static i18n %}
 	{% load static %}
 	<link type="text/css" rel="stylesheet" href="{% static "base/style.css" %}" />
 
@@ -11,6 +9,7 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+
 		<h1 id="cabecera" align="center">¡Decide!</h1>
 		{% if user.is_authenticated %}			
 		<ul class="menu">
@@ -29,6 +28,7 @@
         </ul>			
 		{% else %}
 		<ul class="menu">
+
 			<li><a href="{% url 'home' %}">Inicio</a></li>	
 			<li><a href="{% url 'login' %}">Iniciar sesión</a></li>
 			<li><a href="{% url 'signup' %}">Registro</a></li>
@@ -36,7 +36,7 @@
 		{% endif %}
 		<hr>
 		{% block content %}
-		
+
 		<form action="{% url 'set_language' %}" method="post">
 			{% csrf_token %}
 			<input type="hidden" name="next" value="{{ redirect_to }}" />
@@ -52,8 +52,8 @@
 				</select>
 			</div>
 		</form>
-		
-		{% endblock %}		        
+		{% endblock %}	
+        {% block extrabody %}{% endblock %}
     </body>
 </html>
 

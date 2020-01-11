@@ -18,10 +18,15 @@
     	<a href="{% url 'social:begin' 'facebook' %}">
 		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
 	</a>
-	<a href="{% url 'social:begin' 'reddit' %}">
+
 		<button id="reddit" type="button" name="button" class="boton_social">Reddit</button>	
 	</a>
+  <button id="box" type="button" name="button" class="boton_social">Box</button>	
+	</a>
+
 	</form>
+	<br>
+	<script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="Decide_auth_bot" data-size="large" data-auth-url="https://authmoltres.herokuapp.com/authentication/oauth/complete/telegram" data-request-access="write"></script>
 	
 {% endblock %}	
 
