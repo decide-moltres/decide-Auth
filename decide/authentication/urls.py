@@ -19,16 +19,17 @@ urlpatterns = [
     path('register/', RegisterView.as_view()),
 
     path('', views.home, name='home'),	
-    url(r'^login/$', login, {'template_name': 'registrarion/login.html'}, name='login'),
+
+	url(r'^login/$', login, {'template_name': 'registrarion/login.html'}, name='login'),
     path('signup/', views.register, name='signup'),		   
     path('accounts/', include('django.contrib.auth.urls')),	
     url(r'^oauth/', include('social_django.urls', namespace="social")),
-
 	url(r'^profile/$', views.view_profile, name="view_profile"),
 	url(r'^profile/edit/$', views.edit_profile, name="edit_profile"),
-    url(r'^profile/password/$', views.change_password, name='change_password'),
+	url(r'^profile/password/$', views.change_password, name='change_password'),	
+    url(r'^settings/password/$', views.password, name='password'),
+    path('policy/', views.policy, name='policy'), 
 
-    path('policy', views.policy), 
 	
 
 

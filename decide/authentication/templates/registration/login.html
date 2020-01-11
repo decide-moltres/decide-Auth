@@ -8,23 +8,22 @@
 		{{ form.as_p }}
 		<button type="submit">Enviar</button>		
 	
-	<p><strong>-- O --</strong></p>
+	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
 	<a href="{% url 'social:begin' 'github' %}">
-		<button type="button" name="button" class="btn btn-primary">Github</button>	
+		<button id="github" type="button" name="button" class="boton_social">Github</button>	
 	</a>
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
-		<button type="button" name="button" class="btn btn-danger">Google+</button>	
+		<button id="google" type="button" name="button" class="boton_social">Google+</button>	
 	</a>
     	<a href="{% url 'social:begin' 'facebook' %}">
-		<button type="button" name="button" class="btn btn-danger">Facebook</button>	
+		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
 	</a>
-	<a href="{% url 'social:begin' 'reddit' %}">
-		<button type="button" name="button" class="btn btn-danger">Reddit</button>	
-	</a>
-	
 
-	<a href="{% url 'social:begin' 'box' %}">
-		<button type="button" name="button" class="btn btn-danger">Box</button>	
+		<button id="reddit" type="button" name="button" class="boton_social">Reddit</button>	
+	</a>
+  <button id="box" type="button" name="button" class="boton_social">Box</button>	
+	</a>
+
 	</form>
 	<br>
 	<script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="Decide_auth_bot" data-size="large" data-auth-url="https://authmoltres.herokuapp.com/authentication/oauth/complete/telegram" data-request-access="write"></script>
