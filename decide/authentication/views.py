@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.shortcuts import get_object_or_404, render, redirect
 from django.core.exceptions import ObjectDoesNotExist
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, authenticate, login
 
 from django.contrib.auth.decorators import login_required #<--
 from django.shortcuts import render #<--
@@ -128,38 +128,6 @@ def change_password(request):
         args = {'form': form}
         return render(request, 'registration/change_password.html', args)
 
-@login_required
-def settings(request):
-    user = request.user
-
-    try:
-        github_login = user.social_auth.get(provider='github')
-    except UserSocialAuth.DoesNotExist:
-        github_login = None
-    try:
-        google_login = user.social_auth.get(provider='google-oauth2')
-    except UserSocialAuth.DoesNotExist:
-        google_login = None
-    try:
-        facebook_login = user.social_auth.get(provider='facebook')
-    except UserSocialAuth.DoesNotExist:
-        facebook_login = None
-		
-    try:
-        reddit_login = user.social_auth.get(provider='reddit')
-    except UserSocialAuth.DoesNotExist:
-        reddit_login = None		
-
-    can_disconnect = (user.social_auth.count() > 1 or user.has_usable_password())
-
-    return render(request, 'social/settings.html', {
-        'github_login': github_login,
-        'google_login': google_login,
-        'facebook_login': facebook_login,
-		'reddit_login': reddit_login,
-        'can_disconnect': can_disconnect
-    })
-	
 	
 @login_required
 def password(request):
@@ -180,6 +148,19 @@ def password(request):
     else:
         form = PasswordForm(request.user)
     return render(request, 'social/password.html', {'form': form})		
+	
+def user_login(request):
+    '''
+    Login
+    '''
+    if request.method == 'POST':
+            user = authenticate(
+                username=request.POST['email'],
+                password=request.POST['password']
+            )
+            if user is not None:
+                login(request, user)
+                return redirect(dashboard)
 	
 
 
