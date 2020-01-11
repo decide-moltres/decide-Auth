@@ -50,5 +50,21 @@
   {% else %}
     <a href="{% url 'social:begin' 'facebook' %}">Conectarse a Facebook</a>
   {% endif %}
+  
+  <h3>Reddit</h3>
+  {% if reddit_login %}
+    <p>Conectado mediante cuenta de Reddit</p>
+    {% if can_disconnect %}
+      <form method="post" action="{% url 'social:disconnect' 'reddit' %}">
+        {% csrf_token %}
+        <button type="submit">Desconectarte de Reddit</button>
+      </form>
+    {% else %}
+      <button type="button" disabled>Desconectarte de Reddit</button>
+      <p style="color: red">Debes <a href="{% url 'password' %}">crear una contraseña</a> para tu cuenta antes de desconectarte.</p>
+    {% endif %}
+  {% else %}
+    <a href="{% url 'social:begin' 'reddit' %}">Conectarse a Reddit</a>
+  {% endif %}
 
 {% endblock %}

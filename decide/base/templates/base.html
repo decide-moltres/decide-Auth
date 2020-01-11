@@ -1,14 +1,59 @@
+{% load static i18n %}
+
 <!DOCTYPE html>
 <html>
+
+	{% load static %}
+	<link type="text/css" rel="stylesheet" href="{% static "base/style.css" %}" />
+
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}Decide!{% endblock %}</title>
-        {% block extrahead %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
-
-        {% block extrabody %}{% endblock %}
+		<h1 id="cabecera" align="center">¡Decide!</h1>
+		{% if user.is_authenticated %}			
+		<ul class="menu">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+            <li><a href="{% url 'view_profile' %}">Perfil personal</a></li>
+            <li><a href="{% url 'edit_profile' %}">Editar datos personales</a></li>
+			{% if user.has_usable_password %}
+				<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+			{% endif %}
+			<li><a href="{% url 'settings' %}">Redes sociales</a></li>	
+			{% if not user.has_usable_password %}			
+				<li><a href="{% url 'password' %}">Cambiar contraseña</a></li>
+			{% endif %}
+			<li><a href="{% url 'logout' %}">Cerrar sesión</a> </li>
+            <li><p> Estas autentificado como <strong>{{ user.username }}</strong></p> </li>
+        </ul>			
+		{% else %}
+		<ul class="menu">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+			<li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+			<li><a href="{% url 'signup' %}">Registro</a></li>
+		</ul>
+		{% endif %}
+		<hr>
+		{% block content %}
+		
+		<form action="{% url 'set_language' %}" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="next" value="{{ redirect_to }}" />
+			<div class="col s12 language1">
+				<select class="browser-default "name="language" onchange="this.form.submit()">
+					{% get_current_language as LANGUAGE_CODE %}
+					{% get_available_languages as LANGUAGES %}
+					{% for lang in languages %}
+						<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected disabled hidden {% endif %}>
+							{{ lang.1 }}
+						</option>
+					{% endfor %}
+				</select>
+			</div>
+		</form>
+		
+		{% endblock %}		        
     </body>
 </html>
+
