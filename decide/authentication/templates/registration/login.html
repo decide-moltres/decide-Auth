@@ -10,13 +10,20 @@
 	
 	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
 	<a href="{% url 'social:begin' 'github' %}">
-		<button id="github" type="button" name="button" class="boton_social">Github</button>	
+		<button id="github" type="button" name="button" class="btn btn-git">
+			<i class="fab fa-github"></i>
+		</button>	
 	</a>
+
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
-		<button id="google" type="button" name="button" class="boton_social">Google+</button>	
+		<button id="google" type="button" name="button" class="btn btn-gplus">
+			<i class="fab fa-google-plus-g left"></i>
+		</button>	
 	</a>
     	<a href="{% url 'social:begin' 'facebook' %}">
-		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
+		<button id="facebook" type="button" name="button" class="btn btn-fb">
+			<i class="fab fa-facebook-f left"></i>
+		</button>	
 	</a>
 
 		<button id="reddit" type="button" name="button" class="boton_social">Reddit</button>	
