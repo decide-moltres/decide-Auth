@@ -1,3 +1,5 @@
+{% load static i18n %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,9 +8,27 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body>
-        {% block content %}
+        <h1>¡Decide!</h1>
+		{% if user.is_authenticated %}			
+		<ul class="nav navbar-nav">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+            <li><a href="{% url 'view_profile' %}">Perfil personal</a></li>
+            <li><a href="{% url 'edit_profile' %}">Editar datos personales</a></li>
+			<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+			<li><a href="{% url 'logout' %}">Cerrar sesión</a> </li>
+            <li><strong> Estas autentificado como {{ user.username }}</strong> </li>
+        </ul>			
+		{% else %}
+		<ul class="nav navbar-nav">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+			<li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+			<li><a href="{% url 'signup' %}">Registro</a></li>
+		</ul>
+		{% endif %}
+		<hr>
+		{% block content %}
 
-        <form action="{% url 'set_language' %}" method="post">
+		<form action="{% url 'set_language' %}" method="post">
 			{% csrf_token %}
 			<input type="hidden" name="next" value="{{ redirect_to }}" />
 			<div class="col s12 language1">
@@ -24,7 +44,7 @@
 			</div>
 		</form>
 
-        {% endblock %}
+		{% endblock %}	
 
         {% block extrabody %}{% endblock %}
     </body>
