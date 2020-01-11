@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block content %}
+
+	{% trans "Let's translate this" %}
 
 	<h2>Página principal</h2>
 	<p>Bienvenido a Decide, {% if user.is_authenticated %}{{ user.username }}{% else %}visitante{% endif %}</p>
