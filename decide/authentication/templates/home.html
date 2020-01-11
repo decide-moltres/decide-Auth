@@ -6,12 +6,12 @@
 
 	{% trans "Let's translate this" %}
 
-	<h2>Página principal</h2>
-	<p>Bienvenido a Decide, {% if user.is_authenticated %}{{ user.username }}{% else %}visitante{% endif %}</p>
+	<h2>{% trans "Homepage" %}</h2>
+	<p>{% trans "Welcome to Decide, " %} {% if user.is_authenticated %}{{ user.username }}{% else %}{% trans "visitor" %}{% endif %}</p>
 	<p>
-		<strong> Total de usuarios registrados: </strong> {{ count }}
+		<strong> {% trans "Total registeres users" %} </strong> {{ count }}
 	</p>
-  <a href="{% url 'policy' %}">Nuestra política de privacidad</a>
+  <a href="{% url 'policy' %}">{% trans "Our privacy policy" %}</a>
 {% endblock %}	
 
 
