@@ -11,19 +11,26 @@
 	
 	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
 	<a href="{% url 'social:begin' 'github' %}">
-		<button id="github" type="button" name="button" class="boton_social">Github</button>	
-	</a>
+		<button style="height:50px;width:200px" id="github" type="button" name="button" class="btn btn-block btn-social btn-github">
+			<span class="fa fa-github"></span> Sign in with Github
+		</button></a>
 	<a href="{% url 'social:begin' 'google-oauth2' %}">
-		<button id="google" type="button" name="button" class="boton_social">Google+</button>	
-	</a>
+		<button style="height:50px;width:200px" id="google" type="button" name="button" class="btn btn-block btn-social btn-google">
+			<span class="fa fa-google"></span> Sign in with Google
+		</button></a>
     	<a href="{% url 'social:begin' 'facebook' %}">
-		<button id="facebook" type="button" name="button" class="boton_social">Facebook</button>	
-	</a>
-
-		<button id="reddit" type="button" name="button" class="boton_social">Reddit</button>	
-	</a>
-  <button id="box" type="button" name="button" class="boton_social">Box</button>	
-	</a>
+		<button style="height:50px;width:200px" id="facebook" type="button" name="button" class="btn btn-block btn-social btn-facebook">
+			<span class="fa fa-facebook"></span> Sign in with Facebook
+		</button></a>
+	<a href="{% url 'social:begin' 'reddit' %}">
+		<button style="height:50px;width:200px" id="reddit" name="reddit" type="button" class="btn btn-block btn-social btn-reddit">
+			<span class="fa fa-reddit"></span> Sign in with Reddit
+		</button></a>
+	<a href="{% url 'social:begin' 'box' %}">
+        <button style="height:50px;width:200px" id="box" type="button" name="button" class="btn btn-block btn-social btn-dropbox">
+	       <span class="fa fa-dropbox"></span> Sign in with Box
+        </button></a>
+		
 
 	</form>
 	<br>
