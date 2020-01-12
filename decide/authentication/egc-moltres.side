@@ -1,0 +1,429 @@
+{
+  "id": "0efde50f-0cdb-4801-a580-f283bc38ccc0",
+  "version": "2.0",
+  "name": "egc-moltres",
+  "url": "https://egc-decide-moltres.herokuapp.com/authentication",
+  "tests": [{
+    "id": "c710fc68-6d15-4f58-bef8-4879b3f8f330",
+    "name": "privacy-policy",
+    "commands": [{
+      "id": "65d3db0a-130e-4b10-97c3-e01ecb0f3fe3",
+      "comment": "",
+      "command": "open",
+      "target": "/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cd38a49-7d3a-4b89-b6d0-6a9dba16cb8c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "caddb48e-dd22-419b-8e96-ec9e385e6c3f",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "linkText=Our privacy policy",
+      "targets": [
+        ["linkText=Our privacy policy", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Our privacy policy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/policy/')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Our privacy policy')]", "xpath:innerText"]
+      ],
+      "value": "67,11.100006103515625"
+    }, {
+      "id": "764da176-da35-42c9-9380-745debeae98c",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "linkText=Our privacy policy",
+      "targets": [
+        ["linkText=Our privacy policy", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Our privacy policy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/policy/')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Our privacy policy')]", "xpath:innerText"]
+      ],
+      "value": "67,11.100006103515625"
+    }, {
+      "id": "b03c2f90-7bf9-46d2-8db2-e21e5474f05b",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "linkText=Our privacy policy",
+      "targets": [
+        ["linkText=Our privacy policy", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Our privacy policy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/policy/')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Our privacy policy')]", "xpath:innerText"]
+      ],
+      "value": "67,11.100006103515625"
+    }, {
+      "id": "df5d2787-7fff-4203-b38d-9c7287a0db00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Our privacy policy",
+      "targets": [
+        ["linkText=Our privacy policy", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Our privacy policy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/policy/')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Our privacy policy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "21b5fc87-4de3-4f7d-a476-b0586671c364",
+    "name": "login reddit",
+    "commands": [{
+      "id": "e6a0bacc-6519-40c5-a31f-6efa0ad7edae",
+      "comment": "",
+      "command": "open",
+      "target": "https://egc-decide-moltres.herokuapp.com/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8b8464e-ee71-4511-8c0d-b1766fa40afd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "266022f4-8ad1-4dd4-8def-de3ffd653f7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/login/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "797edfa1-b023-49e6-ab60-630baefbdc0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=reddit",
+      "targets": [
+        ["id=reddit", "id"],
+        ["name=reddit", "name"],
+        ["css=#reddit", "css:finder"],
+        ["xpath=//button[@id='reddit']", "xpath:attributes"],
+        ["xpath=//a[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Reddit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "191dd916-7939-4928-99cd-56c9e2b56d67",
+      "comment": "",
+      "command": "click",
+      "target": "name=authorize",
+      "targets": [
+        ["name=authorize", "name"],
+        ["css=.allow", "css:finder"],
+        ["xpath=//input[@name='authorize']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4cc965a-78e0-4839-9597-76fe45f39e30",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Terminar sesión",
+      "targets": [
+        ["linkText=Terminar sesión", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Terminar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/logout/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Terminar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3c959071-e946-47a2-949c-28f16cd3a2d7",
+    "name": "login facebook",
+    "commands": [{
+      "id": "ba3aadc3-1e02-49f1-ab58-754f754c4b7e",
+      "comment": "",
+      "command": "open",
+      "target": "https://egc-decide-moltres.herokuapp.com/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6136471-7262-4f70-8903-b97d2ee95ce3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bc914fc-1c15-455b-8517-de5dba153765",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/login/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c64fd2e-4854-446f-9cc9-db95773b53b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=facebook",
+      "targets": [
+        ["id=facebook", "id"],
+        ["css=#facebook", "css:finder"],
+        ["xpath=//button[@id='facebook']", "xpath:attributes"],
+        ["xpath=//a[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Facebook')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff751e65-03df-4dd5-8e6b-9f7da35f9906",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Terminar sesión",
+      "targets": [
+        ["linkText=Terminar sesión", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Terminar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/logout/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Terminar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "17e60093-efa7-4080-9b18-6b1b736350e1",
+    "name": "login github",
+    "commands": [{
+      "id": "ce6fc93d-c11b-4a58-9543-df35a6a2e6f9",
+      "comment": "",
+      "command": "open",
+      "target": "https://egc-decide-moltres.herokuapp.com/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16675dcd-b03d-4395-805d-548ad0b1c6f2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dd96252-1a05-403e-a6f9-221281ec21a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/login/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e612cd1c-2811-453c-b8ba-8d5d6c3da72c",
+      "comment": "",
+      "command": "click",
+      "target": "id=github",
+      "targets": [
+        ["id=github", "id"],
+        ["name=button", "name"],
+        ["css=#github", "css:finder"],
+        ["xpath=//button[@id='github']", "xpath:attributes"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Github')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96243867-2252-4322-b759-ec5e5cdac22d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Terminar sesión",
+      "targets": [
+        ["linkText=Terminar sesión", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Terminar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/logout/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Terminar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a56be32b-0445-4c52-a45f-1d97b8ebc840",
+    "name": "login google",
+    "commands": [{
+      "id": "a5b98ad4-3e5f-441f-baa7-155370942539",
+      "comment": "",
+      "command": "open",
+      "target": "https://egc-decide-moltres.herokuapp.com/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e6d5348-f4e6-4382-9965-3d81f79d9704",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee766378-cc78-429d-b6a0-3c918991a4f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/login/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07dc7374-d201-4091-a0fb-8462753f6a3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=google",
+      "targets": [
+        ["id=google", "id"],
+        ["css=#google", "css:finder"],
+        ["xpath=//button[@id='google']", "xpath:attributes"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a622402-7083-463c-9988-b97fff29a72b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Terminar sesión",
+      "targets": [
+        ["linkText=Terminar sesión", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Terminar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/logout/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Terminar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2db23d77-738a-427f-975e-6820949d9097",
+    "name": "test probar vistas",
+    "commands": [{
+      "id": "d0e43997-3f75-4fd2-b2ee-31bdc48227a0",
+      "comment": "",
+      "command": "open",
+      "target": "https://egc-decide-moltres.herokuapp.com/authentication/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bf4ba08-913e-4ee2-a496-eb4d8ba15f58",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "641x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05f9da8b-e907-4ce3-b268-080876c8a917",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inicio",
+      "targets": [
+        ["linkText=Inicio", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Inicio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inicio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c8c6723-2634-403b-9b53-80d7c8d65d7f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/accounts/login/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90012a5e-0043-42fd-b16e-b84ef1b1b057",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Signup",
+      "targets": [
+        ["linkText=Signup", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Signup')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/signup/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Signup')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0081444e-57ee-4f1d-9d75-db0d84bfee5c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inicio",
+      "targets": [
+        ["linkText=Inicio", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Inicio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inicio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40b2d83a-a17e-49d9-9ac2-95c29d7d29d5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Our privacy policy",
+      "targets": [
+        ["linkText=Our privacy policy", "linkText"],
+        ["css=a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Our privacy policy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/authentication/policy/')]", "xpath:href"],
+        ["xpath=//body/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Our privacy policy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "65b4285b-85b6-4acc-bb41-c24fb86978a9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c710fc68-6d15-4f58-bef8-4879b3f8f330"]
+  }],
+  "urls": ["https://egc-decide-moltres.herokuapp.com/", "https://egc-decide-moltres.herokuapp.com/authentication"],
+  "plugins": []
+}
