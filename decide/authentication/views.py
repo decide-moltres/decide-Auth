@@ -89,6 +89,10 @@ def register(request):
         if form.is_valid():
             form.save()
             return redirect(reverse('home'))
+        else:
+            form = RegistrationForm()
+            args = {'form': form}
+            return render(request, 'registration/signup.html', args)	
     else:
         form = RegistrationForm()
 
