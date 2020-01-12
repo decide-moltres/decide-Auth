@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-12 12:46+0000\n"
+"POT-Creation-Date: 2020-01-12 14:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -313,99 +313,99 @@ msgstr "y modificada/generada por"
 msgid "App Privacy Policy Generator"
 msgstr "App Privacy Policy Generator"
 
-#: authentication/templates/registration/change_password.html:4
-#: base/templates/base.html:20 base/templates/base.html:24
+#: authentication/templates/registration/change_password.html:5
+#: base/templates/base.html:25 base/templates/base.html:29
 msgid "Change password"
 msgstr "Cambiar contraseña"
 
-#: authentication/templates/registration/change_password.html:8
-#: authentication/templates/registration/login.html:9
+#: authentication/templates/registration/change_password.html:9
+#: authentication/templates/registration/login.html:12
 msgid "Submit"
 msgstr "Enviar"
 
-#: authentication/templates/registration/edit_profile.html:5
+#: authentication/templates/registration/edit_profile.html:6
 msgid "Edit data"
 msgstr "Editar información"
 
-#: authentication/templates/registration/edit_profile.html:14
+#: authentication/templates/registration/edit_profile.html:15
 msgid "Change"
 msgstr "Cambiar"
 
-#: authentication/templates/registration/login.html:5
-#: base/templates/base.html:33 booth/templates/booth/booth.html:49
+#: authentication/templates/registration/login.html:7
+#: base/templates/base.html:38 booth/templates/booth/booth.html:49
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: authentication/templates/registration/login.html:11
+#: authentication/templates/registration/login.html:14
 msgid "You can access to the following "
 msgstr "Puedes acceder a las siguientes "
 
-#: authentication/templates/registration/login.html:11
+#: authentication/templates/registration/login.html:14
 msgid "social networks "
 msgstr "redes sociales "
 
-#: authentication/templates/registration/login.html:11
+#: authentication/templates/registration/login.html:14
 msgid "as a user"
 msgstr "como un usuario"
 
-#: authentication/templates/registration/profile.html:11
+#: authentication/templates/registration/profile.html:12
 msgid "User Profile"
 msgstr "Perfil del usuario"
 
-#: authentication/templates/registration/profile.html:12
+#: authentication/templates/registration/profile.html:13
 #: booth/templates/booth/booth.html:33
 msgid "Username"
 msgstr "Nombre de usuario"
 
-#: authentication/templates/registration/profile.html:13
+#: authentication/templates/registration/profile.html:14
 msgid "Name"
 msgstr "Nombre"
 
-#: authentication/templates/registration/profile.html:14
+#: authentication/templates/registration/profile.html:15
 msgid "Surname"
 msgstr "Apellidos"
 
-#: authentication/templates/registration/profile.html:15
+#: authentication/templates/registration/profile.html:16
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: authentication/templates/registration/signup.html:4
+#: authentication/templates/registration/signup.html:5
 msgid "Register form"
 msgstr "Formulario de registro"
 
-#: authentication/templates/registration/signup.html:8
+#: authentication/templates/registration/signup.html:9
 msgid "Register"
 msgstr "Registrar"
 
-#: authentication/templates/social/password.html:6
+#: authentication/templates/social/password.html:7
 msgid "You have not defined a password yet."
 msgstr "Aún no has definido una contraseña."
 
-#: authentication/templates/social/password.html:11
+#: authentication/templates/social/password.html:12
 msgid "Save changes"
 msgstr "Guardar cambios"
 
-#: base/templates/base.html:16 base/templates/base.html:32
+#: base/templates/base.html:20 base/templates/base.html:37
 msgid "Home"
 msgstr "Inicio"
 
-#: base/templates/base.html:17
+#: base/templates/base.html:21
 msgid "Personal profile"
 msgstr "Perfil personal"
 
-#: base/templates/base.html:18
+#: base/templates/base.html:22
 msgid "Edit personal data"
 msgstr "Editar información personal"
 
-#: base/templates/base.html:26
+#: base/templates/base.html:31
 msgid "Log out"
 msgstr "Cerrar sesión"
 
-#: base/templates/base.html:27
+#: base/templates/base.html:32
 msgid "You're authenticated as "
 msgstr "Estás autenticado como "
 
-#: base/templates/base.html:34
+#: base/templates/base.html:39
 msgid "Signup"
 msgstr "Registrarse"
 
@@ -430,11 +430,11 @@ msgstr "Error: "
 msgid "Conglatulations. Your vote has been sent"
 msgstr "Enhorabuena. Tu voto se ha enviado"
 
-#: decide/settings.py:185
+#: decide/settings.py:186
 msgid "English"
 msgstr "Inglés"
 
-#: decide/settings.py:186
+#: decide/settings.py:187
 msgid "Español"
 msgstr "Español"
 
