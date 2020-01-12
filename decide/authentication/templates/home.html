@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+	<h2>{% trans "Homepage" %}</h2>
+	<p>{% trans "Welcome to Decide, " %} {% if user.is_authenticated %}{{ user.username }}{% else %}{% trans "visitor" %}{% endif %}</p>
+	<p>
+		<strong> {% trans "Total registeres users" %} </strong> {{ count }}
+	</p>
+  <a href="{% url 'policy' %}">{% trans "Our privacy policy" %}</a>
+{% endblock %}	
+
+

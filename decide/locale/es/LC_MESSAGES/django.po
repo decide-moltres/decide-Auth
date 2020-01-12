@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-12 14:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: authentication/templates/home.html:7
+msgid "Homepage"
+msgstr "Inicio"
+
+#: authentication/templates/home.html:8
+msgid "Welcome to Decide, "
+msgstr "Bienvenido a Decide, "
+
+#: authentication/templates/home.html:8
+msgid "visitor"
+msgstr "visitante"
+
+#: authentication/templates/home.html:10
+msgid "Total registeres users"
+msgstr "Total de usuarios registrados"
+
+#: authentication/templates/home.html:12
+msgid "Our privacy policy"
+msgstr "Nuestra política de privacidad"
+
+#: authentication/templates/privacy_policy.html:12
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+#: authentication/templates/privacy_policy.html:13
+msgid ""
+"Universidad de Sevilla built the Decide app as a Free app. This SERVICE is "
+"provided by Universidad de Sevilla at no cost and is intended for use as is."
+msgstr ""
+"La Universidad de Sevilla creó la aplicación Decide como una aplicación "
+"gratuita. Este SERVICIO es proporcionado por la Universidad de Sevilla sin "
+"costo y está diseñado para su uso tal cual."
+
+#: authentication/templates/privacy_policy.html:15
+msgid ""
+"This page is used to inform visitors regarding our policies with the "
+"collection, use, and disclosure of Personal Information if anyone decided to "
+"use our Service."
+msgstr ""
+"Esta página se utiliza para informar a los visitantes sobre nuestras "
+"políticas con la recopilación, uso y divulgación de información personal si "
+"alguien decide utilizar nuestro servicio."
+
+#: authentication/templates/privacy_policy.html:17
+msgid ""
+"If you choose to use our Service, then you agree to the collection and use "
+"of information in relation to this policy. The Personal Information that we "
+"collect is used for providing and improving the Service. We will not use or "
+"share your information with anyone except as described in this Privacy "
+"Policy."
+msgstr ""
+"Si elige utilizar nuestro Servicio, entonces acepta la recopilación y el uso "
+"de información en relación con esta política. La información personal que "
+"recopilamos se utiliza para proporcionar y mejorar el Servicio. No "
+"utilizaremos ni compartiremos su información con nadie, excepto como se "
+"describe en esta Política de privacidad."
+
+#: authentication/templates/privacy_policy.html:19
+msgid ""
+"The terms used in this Privacy Policy have the same meanings as in our Terms "
+"and Conditions, which is accessible at Decide unless otherwise defined in "
+"this Privacy Policy."
+msgstr ""
+"Los términos utilizados en esta Política de privacidad tienen el mismo "
+"significado que en nuestros Términos y condiciones, a los que se puede "
+"acceder en Decide, a menos que se defina lo contrario en esta Política de "
+"privacidad."
+
+#: authentication/templates/privacy_policy.html:20
+msgid "Information Collection and Use"
+msgstr "Recolección de información y uso"
+
+#: authentication/templates/privacy_policy.html:21
+msgid ""
+"For a better experience, while using our Service, we may require you to "
+"provide us with certain personally identifiable information. The information "
+"that we request will be retained by us and used as described in this privacy "
+"policy."
+msgstr ""
+"Para una mejor experiencia, mientras usa nuestro Servicio, es posible que le "
+"solicitemos que nos facilite cierta información de identificación personal. "
+"La información que solicitamos será retenida por nosotros y utilizada como "
+"se describe en esta política de privacidad."
+
+#: authentication/templates/privacy_policy.html:23
+msgid ""
+"The app does use third party services that may collect information used to "
+"identify you."
+msgstr ""
+"La aplicación utiliza servicios de terceros que pueden recopilar información "
+"utilizada para identificarlo."
+
+#: authentication/templates/privacy_policy.html:25
+msgid "Link to privacy policy of third party service providers used by the app"
+msgstr ""
+"Enlace a la política de privacidad de terceros proveedores de servicios "
+"utilizados por la aplicación"
+
+#: authentication/templates/privacy_policy.html:26
+msgid "Log Data"
+msgstr "Información de registro"
+
+#: authentication/templates/privacy_policy.html:27
+msgid ""
+"We want to inform you that whenever you use our Service, in a case of an "
+"error in the app we collect data and information (through third party "
+"products) on your phone called Log Data. This Log Data may include "
+"information such as your device Internet Protocol (“IP”) address, device "
+"name, operating system version, the configuration of the app when utilizing "
+"our Service, the time and date of your use of the Service, and other "
+"statistics."
+msgstr ""
+"Queremos informarle que cada vez que utiliza nuestro Servicio, en caso de un "
+"error en la aplicación, recopilamos datos e información (a través de "
+"productos de terceros) en su teléfono llamados Datos de registro. Estos "
+"datos de registro pueden incluir información como la dirección del Protocolo "
+"de Internet de su dispositivo (“IP”), el nombre del dispositivo, la versión "
+"del sistema operativo, la configuración de la aplicación cuando utiliza "
+"nuestro Servicio, la hora y la fecha de uso del Servicio y otras "
+"estadísticas."
+
+#: authentication/templates/privacy_policy.html:28
+msgid "Cookies"
+msgstr "Cookies"
+
+#: authentication/templates/privacy_policy.html:29
+msgid ""
+"Cookies are files with a small amount of data that are commonly used as "
+"anonymous unique identifiers. These are sent to your browser from the "
+"websites that you visit and are stored on your device's internal memory."
+msgstr ""
+"Las cookies son archivos con una pequeña cantidad de datos que se usan "
+"comúnmente como identificadores únicos anónimos. Estos se envían a su "
+"navegador desde los sitios web que visita y se almacenan en la memoria "
+"interna de su dispositivo."
+
+#: authentication/templates/privacy_policy.html:31
+msgid ""
+"This Service does not use these “cookies” explicitly. However, the app may "
+"use third party code and libraries that use “cookies” to collect information "
+"and improve their services. You have the option to either accept or refuse "
+"these cookies and know when a cookie is being sent to your device. If you "
+"choose to refuse our cookies, you may not be able to use some portions of "
+"this Service."
+msgstr ""
+"Este servicio no utiliza estas “cookies” explícitamente. Sin embargo, la "
+"aplicación puede usar código de terceros y bibliotecas que usan “cookies” "
+"para recopilar información y mejorar sus servicios. Tiene la opción de "
+"aceptar o rechazar estas cookies y saber cuándo se envía una cookie a su "
+"dispositivo. Si elige rechazar nuestras cookies, es posible que no pueda "
+"usar algunas partes de este Servicio."
+
+#: authentication/templates/privacy_policy.html:32
+msgid "Service Providers"
+msgstr "Proveedores de servicio"
+
+#: authentication/templates/privacy_policy.html:33
+msgid ""
+"We may employ third-party companies and individuals due to the following "
+"reasons:"
+msgstr ""
+"Podemos emplear a empresas e individuos de terceros debido a las siguientes "
+"razones:"
+
+#: authentication/templates/privacy_policy.html:34
+msgid "To facilitate our Service;"
+msgstr "Para facilitar nuestro Servicio;"
+
+#: authentication/templates/privacy_policy.html:34
+msgid "To provide the Service on our behalf;"
+msgstr "Para proporcionar el Servicio en nuestro nombre;"
+
+#: authentication/templates/privacy_policy.html:34
+msgid "To perform Service-related services; or"
+msgstr "Para realizar servicios relacionados con el Servicio; o"
+
+#: authentication/templates/privacy_policy.html:34
+msgid "To assist us in analyzing how our Service is used."
+msgstr "Para ayudarnos a analizar cómo se utiliza nuestro Servicio."
+
+#: authentication/templates/privacy_policy.html:35
+msgid ""
+"We want to inform users of this Service that these third parties have access "
+"to your Personal Information. The reason is to perform the tasks assigned to "
+"them on our behalf. However, they are obligated not to disclose or use the "
+"information for any other purpose."
+msgstr ""
+"Queremos informar a los usuarios de este Servicio que estos terceros tienen "
+"acceso a su Información personal. La razón es realizar las tareas que se les "
+"asignaron en nuestro nombre. Sin embargo, están obligados a no divulgar ni "
+"utilizar la información para ningún otro propósito."
+
+#: authentication/templates/privacy_policy.html:36
+msgid "Security"
+msgstr "Seguridad"
+
+#: authentication/templates/privacy_policy.html:37
+#, python-format
+msgid ""
+"We value your trust in providing us your Personal Information, thus we are "
+"striving to use commercially acceptable means of protecting it. But remember "
+"that no method of transmission over the internet, or method of electronic "
+"storage is 100%% secure and reliable, and we cannot guarantee its absolute "
+"security."
+msgstr ""
+"Valoramos su confianza en proporcionarnos su información personal, por lo "
+"tanto, nos esforzamos por utilizar medios comercialmente aceptables para "
+"protegerla. Pero recuerde que ningún método de transmisión por Internet o "
+"método de almacenamiento electrónico es 100%% seguro y confiable, y no "
+"podemos garantizar su seguridad absoluta."
+
+#: authentication/templates/privacy_policy.html:38
+msgid "Links to Other Sites"
+msgstr "Enlaces a otros sitios"
+
+#: authentication/templates/privacy_policy.html:38
+msgid ""
+"This Service may contain links to other sites. If you click on a third-party "
+"link, you will be directed to that site. Note that these external sites are "
+"not operated by us. Therefore, we strongly advise you to review the Privacy "
+"Policy of these websites. We have no control over and assume no "
+"responsibility for the content, privacy policies, or practices of any third-"
+"party sites or services."
+msgstr ""
+"Este servicio puede contener enlaces a otros sitios. Si hace click en un "
+"enlace de un tercero, será dirigido a ese sitio. Tenga en cuenta que estos "
+"sitios externos no son operados por nosotros. Por lo tanto, le recomendamos "
+"encarecidamente que revise la Política de privacidad de estos sitios web. No "
+"tenemos control ni asumimos ninguna responsabilidad por el contenido, las "
+"políticas de privacidad o las prácticas de sitios o servicios de terceros."
+
+#: authentication/templates/privacy_policy.html:39
+msgid "Children’s Privacy"
+msgstr "Privacidad de los niños"
+
+#: authentication/templates/privacy_policy.html:40
+msgid ""
+"These Services do not address anyone under the age of 13. We do not "
+"knowingly collect personally identifiable information from children under "
+"13. In the case we discover that a child under 13 has provided us with "
+"personal information, we immediately delete this from our servers. If you "
+"are a parent or guardian and you are aware that your child has provided us "
+"with personal information, please contact us so that we will be able to do "
+"necessary actions."
+msgstr ""
+"Estos Servicios no se dirigen a ninguna persona menor de 13 años. No "
+"recopilamos a sabiendas información de identificación personal de niños "
+"menores de 13 años. En el caso de que descubramos que un niño menor de 13 "
+"años nos ha proporcionado información personal, la eliminaremos "
+"inmediatamente de nuestros servidores. Si usted es padre o tutor y sabe que "
+"su hijo nos ha proporcionado información personal, contáctenos para que "
+"podamos realizar las acciones necesarias."
+
+#: authentication/templates/privacy_policy.html:41
+msgid "Changes to This Privacy Policy"
+msgstr "Cambios a esta Política de Privacidad"
+
+#: authentication/templates/privacy_policy.html:41
+msgid ""
+"We may update our Privacy Policy from time to time. Thus, you are advised to "
+"review this page periodically for any changes. We will notify you of any "
+"changes by posting the new Privacy Policy on this page. These changes are "
+"effective immediately after they are posted on this page."
+msgstr ""
+"Podemos actualizar nuestra Política de privacidad de vez en cuando. Por lo "
+"tanto, se recomienda que revise esta página periódicamente en busca de "
+"cambios. Le notificaremos cualquier cambio publicando la nueva Política de "
+"privacidad en esta página. Estos cambios son efectivos inmediatamente "
+"después de su publicación en esta página."
+
+#: authentication/templates/privacy_policy.html:42
+#: authentication/templates/privacy_policy.html:45
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: authentication/templates/privacy_policy.html:43
+msgid ""
+"If you have any questions or suggestions about our Privacy Policy, do not "
+"hesitate to contact us at juavarama@alum.us.es."
+msgstr ""
+"Si tiene alguna pregunta o sugerencia sobre nuestra Política de Privacidad, "
+"no dude en contactarnos en juavarama@alum.us.es."
+
+#: authentication/templates/privacy_policy.html:46
+msgid "This privacy policy page was created at"
+msgstr "Esta página de política de privacidad fue creada en"
+
+#: authentication/templates/privacy_policy.html:49
+msgid "and modified/generated by"
+msgstr "y modificada/generada por"
+
+#: authentication/templates/privacy_policy.html:50
+msgid "App Privacy Policy Generator"
+msgstr "App Privacy Policy Generator"
+
+#: authentication/templates/registration/change_password.html:5
+#: base/templates/base.html:25 base/templates/base.html:29
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: authentication/templates/registration/change_password.html:9
+#: authentication/templates/registration/login.html:12
+msgid "Submit"
+msgstr "Enviar"
+
+#: authentication/templates/registration/edit_profile.html:6
+msgid "Edit data"
+msgstr "Editar información"
+
+#: authentication/templates/registration/edit_profile.html:15
+msgid "Change"
+msgstr "Cambiar"
+
+#: authentication/templates/registration/login.html:7
+#: base/templates/base.html:38 booth/templates/booth/booth.html:49
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: authentication/templates/registration/login.html:14
+msgid "You can access to the following "
+msgstr "Puedes acceder a las siguientes "
+
+#: authentication/templates/registration/login.html:14
+msgid "social networks "
+msgstr "redes sociales "
+
+#: authentication/templates/registration/login.html:14
+msgid "as a user"
+msgstr "como un usuario"
+
+#: authentication/templates/registration/profile.html:12
+msgid "User Profile"
+msgstr "Perfil del usuario"
+
+#: authentication/templates/registration/profile.html:13
+#: booth/templates/booth/booth.html:33
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: authentication/templates/registration/profile.html:14
+msgid "Name"
+msgstr "Nombre"
+
+#: authentication/templates/registration/profile.html:15
+msgid "Surname"
+msgstr "Apellidos"
+
+#: authentication/templates/registration/profile.html:16
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: authentication/templates/registration/signup.html:5
+msgid "Register form"
+msgstr "Formulario de registro"
+
+#: authentication/templates/registration/signup.html:9
+msgid "Register"
+msgstr "Registrar"
+
+#: authentication/templates/social/password.html:7
+msgid "You have not defined a password yet."
+msgstr "Aún no has definido una contraseña."
+
+#: authentication/templates/social/password.html:12
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: base/templates/base.html:20 base/templates/base.html:37
+msgid "Home"
+msgstr "Inicio"
+
+#: base/templates/base.html:21
+msgid "Personal profile"
+msgstr "Perfil personal"
+
+#: base/templates/base.html:22
+msgid "Edit personal data"
+msgstr "Editar información personal"
+
+#: base/templates/base.html:31
+msgid "Log out"
+msgstr "Cerrar sesión"
+
+#: base/templates/base.html:32
+msgid "You're authenticated as "
+msgstr "Estás autenticado como "
+
+#: base/templates/base.html:39
+msgid "Signup"
+msgstr "Registrarse"
+
+#: booth/templates/booth/booth.html:19
+msgid "logout"
+msgstr "Cerrar sesión"
+
+#: booth/templates/booth/booth.html:41
+msgid "Password"
+msgstr "Contraseña"
+
+#: booth/templates/booth/booth.html:64
+msgid "Vote"
+msgstr "Voto"
+
+#: booth/templates/booth/booth.html:160 booth/templates/booth/booth.html:170
+#: booth/templates/booth/booth.html:201
+msgid "Error: "
+msgstr "Error: "
+
+#: booth/templates/booth/booth.html:198
+msgid "Conglatulations. Your vote has been sent"
+msgstr "Enhorabuena. Tu voto se ha enviado"
+
+#: decide/settings.py:186
+msgid "English"
+msgstr "Inglés"
+
+#: decide/settings.py:187
+msgid "Español"
+msgstr "Español"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"

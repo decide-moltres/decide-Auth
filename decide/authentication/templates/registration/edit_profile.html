@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+
+{% block head %}
+<title>{% trans "Edit data" %}</title>
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}	
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans "Change" %}</button>
+    </form>
+    <br>
+</div>
+{% endif %}
+{% endblock %}

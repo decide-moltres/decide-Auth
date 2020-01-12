@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+
+	{% load static i18n %}
+	<link type="text/css" rel="stylesheet" href="{% static "authentication/style.css" %}" />
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+		<h1 id="cabecera" align="center">¡Decide!</h1>
+		{% if user.is_authenticated %}			
+		<ul class="menu">
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+            <li><a href="{% url 'view_profile' %}">Perfil personal</a></li>
+            <li><a href="{% url 'edit_profile' %}">Editar datos personales</a></li>
+      {% if user.has_usable_password %}
+			<li><a href="{% url 'change_password' %}">Cambiar contraseña</a></li>
+      {% endif %}
+      {% if not user.has_usable_password %}			
+				<li><a href="{% url 'password' %}">Cambiar contraseña</a></li>
+			{% endif %}
+			<li><a href="{% url 'logout' %}">Cerrar sesión</a> </li>
+            <li><strong> Estas autentificado como {{ user.username }}</strong> </li>
+        </ul>			
+		{% else %}
+		<ul class="menu">
+
+			<li><a href="{% url 'home' %}">Inicio</a></li>	
+			<li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+			<li><a href="{% url 'signup' %}">Registro</a></li>
+		</ul>
+		{% endif %}
+		<hr>
+		{% block content %}
+		{% endblock %}		        
+    </body>
+</html>

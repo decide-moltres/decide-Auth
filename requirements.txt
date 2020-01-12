@@ -1,4 +1,8 @@
 Django==2.0
+django-heroku
+gunicorn
+xlwt
+python-gettext
 pycryptodome==3.6.6
 djangorestframework==3.7.7
 django-cors-headers==2.1.0
@@ -9,3 +13,8 @@ django-rest-swagger==2.2.0
 coverage==4.5.2
 django-nose==1.4.6
 jsonnet==0.12.1
+https://github.com/python-social-auth/social-core/archive/master.zip
+social-auth-app-django
+django-crispy-forms>=1.8.1
+selenium==2.33.0
+pytest
