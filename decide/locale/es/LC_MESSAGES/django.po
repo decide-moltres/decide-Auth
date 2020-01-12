@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 21:30+0000\n"
+"POT-Creation-Date: 2020-01-12 12:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,26 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: authentication/templates/home.html:7
-msgid "Let's translate this"
-msgstr "Traduzcamos esto"
-
-#: authentication/templates/home.html:9
 msgid "Homepage"
 msgstr "Inicio"
 
-#: authentication/templates/home.html:10
+#: authentication/templates/home.html:8
 msgid "Welcome to Decide, "
 msgstr "Bienvenido a Decide, "
 
-#: authentication/templates/home.html:10
+#: authentication/templates/home.html:8
 msgid "visitor"
 msgstr "visitante"
 
-#: authentication/templates/home.html:12
+#: authentication/templates/home.html:10
 msgid "Total registeres users"
 msgstr "Total de usuarios registrados"
 
-#: authentication/templates/home.html:14
+#: authentication/templates/home.html:12
 msgid "Our privacy policy"
 msgstr "Nuestra política de privacidad"
 
@@ -439,5 +435,8 @@ msgid "English"
 msgstr "Inglés"
 
 #: decide/settings.py:186
-msgid "Spanish"
+msgid "Español"
 msgstr "Español"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"

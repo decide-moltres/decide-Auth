@@ -4,8 +4,6 @@
 
 {% block content %}
 
-	{% trans "Let's translate this" %}
-
 	<h2>{% trans "Homepage" %}</h2>
 	<p>{% trans "Welcome to Decide, " %} {% if user.is_authenticated %}{{ user.username }}{% else %}{% trans "visitor" %}{% endif %}</p>
 	<p>
