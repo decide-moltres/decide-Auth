@@ -3,7 +3,8 @@ from django.contrib.auth.models import User
 
 class EmailAuthBackend(backends.ModelBackend):
     
-    """ Backend que usa el par correo electrónico y contraseña para iniciar sesión, si la primera comprobación
+    """ 
+        Backend que usa el par correo electrónico y contraseña para iniciar sesión, si la primera comprobación
         falla, entonces lo comprueba mediante el par nombre de usuario y contraseña.
     """
 
