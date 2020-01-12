@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 
-	<h2>Inicio de sesión</h2>
-	<h4>Puedes acceder mediante tu correo electronico asociado a la cuenta o mediante tu nombre de usuario</h4>
+
+	<h2>{% trans "Login" %}</h2>
+
 	<form method="post">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<button type="submit">Enviar</button>		
+		<button type="submit">{% trans "Submit" %}</button>		
 	
-	<p>-- Puedes acceder como usuario desde las siguientes <strong>redes sociales</strong>--</p>
+	<p>-- {% trans "You can access to the following " %} <strong>{% trans "social networks " %} </strong>{% trans "as a user" %}--</p>
 	<a href="{% url 'social:begin' 'github' %}">
 		<button style="height:50px;width:200px" id="github" type="button" name="button" class="btn btn-block btn-social btn-github">
 			<span class="fa fa-github"></span> Sign in with Github

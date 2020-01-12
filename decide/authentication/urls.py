@@ -20,7 +20,7 @@ urlpatterns = [
 
     path('', views.home, name='home'),	
 
-	url(r'^login/$', login, {'template_name': 'registrarion/login.html'}, name='login'),
+	url(r'^login/$', login, {'template_name': 'registration/login.html'}, name='login'),
     path('signup/', views.register, name='signup'),		   
     path('accounts/', include('django.contrib.auth.urls')),	
     url(r'^oauth/', include('social_django.urls', namespace="social")),

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 
 {% block head %}
-<title>Editar datos</title>
+<title>{% trans "Edit data" %}</title>
 {% endblock %}
 
 {% block content %}
@@ -11,7 +12,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Cambiar</button>
+        <button type="submit">{% trans "Change" %}</button>
     </form>
     <br>
 </div>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 
 {% block head %}
@@ -8,11 +9,11 @@
 {% block content %}
 {% if user.is_authenticated %}	
 	<div class="container">
-		<h1>Perfil de usuario</h1>
-		<p>Nombre de usuario: {{ user }}</p>
-		<p>Nombre: {{ user.first_name }}</p>
-		<p>Apellidos: {{ user.last_name }}</p>
-		<p>Email: {{ user.email }}</p>
+		<h1>{% trans "User Profile" %}</h1>
+		<p>{% trans "Username" %}: {{ user }}</p>
+		<p>{% trans "Name" %}: {{ user.first_name }}</p>
+		<p>{% trans "Surname" %}: {{ user.last_name }}</p>
+		<p>{% trans "Email" %}: {{ user.email }}</p>
 	</div>
 {% endif %}
 {% endblock %}
